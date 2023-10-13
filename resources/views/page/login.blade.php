@@ -4,8 +4,8 @@
         <form action="{{ route('login') }}" class="auth-form" method="POST">
             @csrf
             <h1>
-                <span>ToeDoe</span>
-                <strong>List</strong>
+                <span>Laravel</span>
+                <strong>Dev-Test</strong>
             </h1>
             <h2 class="h3 mb-4 fw-normal">Please sign in</h2>
             <div class="form-floating mb-2">

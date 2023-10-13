@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container py-2">
-        <a class="navbar-brand">
+        <a href="{{ route('home') }}" class="navbar-brand">
             <span>Laravel</span>
             <strong>Dev-Test</strong>
         </a>

@@ -24,19 +24,21 @@ Route::get('/', function () {
 });
 Route::get('/home', function () {
     return view('page.home');
-});
-Route::get('/login', function () {
-    return view('page.login');
-})->name('get.login');
-Route::get('/register', function () {
-    return view('page.register');
-})->name('get.register');
+})->name('home');
+
 
 Route::prefix('auth')->group(function () {
     Route::post('/login', LoginController::class)->middleware('guest')->name('login');
     Route::post('/logout', LogoutController::class)->middleware('auth:sanctum')->name('logout');
     Route::post('/register', RegisterController::class)->name('register');
+    Route::get('/login', function () {
+        return view('page.login');
+    })->name('get.login');
+    Route::get('/register', function () {
+        return view('page.register');
+    })->name('get.register');
 });
-
-Route::resource('category', CategoryController::class);
-Route::resource('products', ProductController::class);
+Route::group(['middleware' => ['auth', 'auth:sanctum']], function () {
+    Route::resource('category', CategoryController::class);
+    Route::resource('products', ProductController::class);
+});

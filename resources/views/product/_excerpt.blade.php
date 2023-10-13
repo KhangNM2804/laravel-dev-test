@@ -26,6 +26,11 @@
                 </form>
             </div>
         </div>
+        <div class="vote">
+            <strong>{{ $product->like }}</strong> {{ $product->like == 1 ? 'Like' : 'Likes' }}
+            <strong>{{ $product->comment }}</strong> {{ $product->comment == 1 ? 'Comment' : 'Comments' }}
+            {{ $product->view }} {{ $product->view == 1 ? 'View' : 'Views' }}
+        </div>
     </div>
     <div class="col-2 justify-content-end">
         <img src="{{ asset('storage/' . $product->photo) }}" alt="Product Image" style="width: 200px;">
