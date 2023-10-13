@@ -18,7 +18,9 @@ class CategoryFactory extends Factory
     {
         return [
             'title' => fake()->title(),
-            'description' => fake()->paragraph()
+            'description' => fake()->paragraph(),
+            'deleted' => fake()->numberBetween(0, 1),
+
         ];
     }
 }

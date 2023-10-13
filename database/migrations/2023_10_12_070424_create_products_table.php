@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('discount_id')->constrained('discounts');
             $table->foreignId('category_id')->constrained('categories');
-            $table->boolean('deleted');
+            $table->boolean('deleted')->default(0);
             $table->timestamps();
         });
     }
