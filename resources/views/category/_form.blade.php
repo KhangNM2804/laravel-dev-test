@@ -1,5 +1,15 @@
 @csrf
 <div class="form-group">
+    <label for="category-code">Category Code</label>
+    <input type="text" name="code" value="{{ old('code', $category->code) }}" id="category-code"
+        class="form-control {{ $errors->has('code') ? 'is-invalid' : '' }}">
+    @if ($errors->has('code'))
+        <div class="invalid-feedback">
+            <strong>{{ $errors->first('code') }}</strong>
+        </div>
+    @endif
+</div>
+<div class="form-group">
     <label for="category-title">Category Title</label>
     <input type="text" name="title" value="{{ old('title', $category->title) }}" id="category-title"
         class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}">

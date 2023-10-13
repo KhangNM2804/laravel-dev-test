@@ -39,4 +39,4 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::resource('category', CategoryController::class);
-Route::resource('product', ProductController::class);
+Route::resource('products', ProductController::class);

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['title', 'description','deleted'];
+    protected $fillable = ['title', 'code', 'description', 'deleted'];
     use HasFactory;
     public function products()
     {
@@ -17,5 +17,4 @@ class Category extends Model
     {
         return $this->created_at->diffForHumans();
     }
-  
 }

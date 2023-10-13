@@ -21,6 +21,7 @@ class ProductFactory extends Factory
     {
         return [
             'title' => fake()->name(),
+            'code' => fake()->title(),
             'description' => fake()->paragraph(),
             'price' => fake()->randomFloat(2, 1, 1000),
             'photo' => fake()->imageUrl($width = 200, $height = 200),

@@ -14,7 +14,7 @@
                     <a href="{{ route('category.index') }}" class="nav-link">Category</a>
                 </li>
                 <li class="nav-item">
-                    <a  class="nav-link">Product</a>
+                    <a href="{{ route('products.index') }}" class="nav-link">Product</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

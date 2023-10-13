@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::where('deleted', '=', 0)->paginate(10);
+        $categories = Category::where('deleted', '=', 0)->orderBy('created_at','desc')->paginate(10);
 
         return view('category.index', compact('categories'));
     }
@@ -38,7 +38,7 @@ class CategoryController extends Controller
     public function update(StoreCategoryRequest $request, Category $category)
     {
 
-        $category->update($request->only('title', 'description'));
+        $category->update($request->only('title', 'code', 'description'));
 
         return redirect('/category')->with('success', "Your category has been updated.");
     }

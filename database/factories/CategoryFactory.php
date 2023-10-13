@@ -18,6 +18,7 @@ class CategoryFactory extends Factory
     {
         return [
             'title' => fake()->title(),
+            'code' => fake()->title(),
             'description' => fake()->paragraph(),
             'deleted' => fake()->numberBetween(0, 1),
 
